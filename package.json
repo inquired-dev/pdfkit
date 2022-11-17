@@ -1,5 +1,5 @@
 {
-  "name": "pdfkit",
+  "name": "@inquired-dev/pdfkit",
   "description": "A PDF generation library for Node.js",
   "keywords": [
     "pdf",
@@ -53,6 +53,7 @@
     "png-js": "^1.0.0"
   },
   "scripts": {
+    "dev-build": "npm run build && npm link",
     "prepublishOnly": "npm run build",
     "build": "rollup -c && browserify --standalone PDFDocument --ignore crypto --ignore iconv-lite js/pdfkit.js > js/pdfkit.standalone.js",
     "browserify-example": "browserify examples/browserify/browser.js > examples/browserify/bundle.js",
